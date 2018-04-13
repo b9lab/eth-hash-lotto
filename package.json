@@ -1,0 +1,24 @@
+{
+  "name": "hash-lotto",
+  "version": "1.0.0",
+  "description": "Guess a future hash. Or rather exploit the fact that a hash sufficiently far in the past is returned as 0.",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.b9lab.com:course-projects/eth-hash-lotto.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.1"
+  },
+  "devDependencies": {
+    "truffle": "4.1.5"
+  }
+}
