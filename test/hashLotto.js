@@ -85,6 +85,19 @@ contract('HashLotto', function(accounts) {
             maxGas);
     });
 
+    it("should not be possible to toldYouSo after 256 blocks without markMyWord first", function() {
+        if (!isTestRPC) this.skip("Needs TestRPC");
+        return web3.eth.getBlockPromise("latest")
+            .then(block => {
+                if (block.number <= 256) {
+                    return mineMany(256 - block.number);
+                }
+            })
+            .then(() => expectedExceptionPromise(
+                () => hashLotto.toldYouSo("brag", { from: accounts[0], gas: maxGas }),
+                maxGas));
+    });
+
     it("should not be possible to toldYouSo with hash 0 after 255 blocks", function() {
         if (!isTestRPC) this.skip("Needs TestRPC");
         return hashLotto.markMyWord(0, 1, { from: accounts[0], value: web3.toWei(0.1) })
