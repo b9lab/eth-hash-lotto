@@ -5,6 +5,8 @@ const addEvmFunctions = require("../utils/evmFunctions.js");
 
 contract('HashLotto', function(accounts) {
     
+    assert.isAtLeast(accounts.length, 1);
+
     addEvmFunctions(web3);
     Promise.promisifyAll(web3.eth, { suffix: "Promise" });
     Promise.promisifyAll(web3.version, { suffix: "Promise" });
