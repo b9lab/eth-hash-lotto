@@ -1,4 +1,4 @@
-pragma solidity 0.4.21;
+pragma solidity 0.4.24;
 
 contract HashLotto {
 
@@ -10,7 +10,7 @@ contract HashLotto {
 
     event LogToldYouSo(address indexed who, bytes32 braggingRights);
 
-    function HashLotto() public payable {
+    constructor() public payable {
     }
 
     function markMyWord(bytes32 myGuess, uint32 ahead) public payable {
@@ -27,7 +27,7 @@ contract HashLotto {
         uint atBlockNumber = myTicket.atBlockNumber;
         require(0 < atBlockNumber);
         require(atBlockNumber < block.number);
-        require(myTicket.myGuess == block.blockhash(atBlockNumber));
+        require(myTicket.myGuess == blockhash(atBlockNumber));
         emit LogToldYouSo(msg.sender, braggingRights);
         delete tickets[msg.sender];
         msg.sender.transfer(address(this).balance);
