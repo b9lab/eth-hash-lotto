@@ -3353,9 +3353,9 @@
   },
   "networks": {
     "3": {
-      "address": "0x53bC6FA1F422bdc000441e0Aff8756b0653700C7",
-      "updated_at": 1536923651130,
-      "transactionHash": "0x8b9d00ffef047e0dced176d8b62df95773cf1e8fd008dd8dfb0d97d0b1da68a6"
+      "address": "0x52c6622e670C4Bd073Ec8163fA4e0cCAC834e286",
+      "updated_at": 1539254779428,
+      "transactionHash": "0x8092ac61dbf673d6cc2ccecf239ee2ed2ff753d6963679d59b86be28d56e848a"
     }
   },
   "schemaVersion": "2.0.1",
