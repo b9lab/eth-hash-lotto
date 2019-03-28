@@ -15,11 +15,9 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "bluebird": "^3.5.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "ganache-cli": "^6.1.3",
-    "truffle": "4.1.13"
+    "truffle": "5.0.8"
   }
 }
